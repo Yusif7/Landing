@@ -1,0 +1,3 @@
+@mixin line_hPxtoNum($fz, $lh) {
+    line-height: $lh/$fz;
+}

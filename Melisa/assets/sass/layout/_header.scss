@@ -1,0 +1,42 @@
+@import '../helpers/vars';
+@import '../helpers/mixins';
+.header {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    background-color: $orange;
+    padding: 12px 0;
+    &__logo {
+        font-size: 4rem;
+        font-family: $ff-playfair;
+        font-weight: $fw-800;
+        @include line_hPxtoNum(40, 44);
+        color: #111111;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -5px;
+            right: -5px;
+            bottom: 2px;
+            content: '';
+            border: 1px solid #111111;
+            border-bottom-width: 2px;
+            border-left-width: 2px;
+        }
+    }
+    &__nav {
+        text-align: end;
+        &__link {
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            font-weight: 600;
+            @include line_hPxtoNum(16, 28.8);
+            color: $black;
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+    }
+}

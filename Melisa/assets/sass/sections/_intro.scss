@@ -1,0 +1,29 @@
+@import '../helpers/vars';
+@import '../helpers/mixins';
+.intro {
+    background-color: $orange;
+    text-align: center;
+    height: 1120px;
+    display: flex;
+    align-items: flex-end;
+    &__desc {
+        font-family: $ff-garamon;
+        font-size: 3.8rem;
+        @include line_hPxtoNum(38, 57);
+        color: $black;
+        opacity: 0.8;
+        margin-bottom: 40px;
+    }
+    &__header {
+        font-family: $ff-playfair;
+        font-size: 15rem;
+        font-weight: $fw-800;
+        @include line_hPxtoNum(150, 160);
+        color: rgb(17, 17, 17);
+        margin: 0;
+    }
+    &__photo {
+        margin: 0;
+        height: 700px;
+    }
+}
